@@ -2,7 +2,9 @@
 :root {
   --bg-black-900: #ffffff;
   --bg-black-100: #fcfafa;
+  --bg-black-80: #f0eeee;
   --bg-black-50: #e7e7e7;
+
   --text-black-900: #272727;
   --text-black-800: #848484;
   --text-black-700: #d8d8d8;
@@ -26,77 +28,12 @@ body {
 }
 
 .main-container {
-  padding-left: 270px;
+  padding-left: 0;
+  position: relative;
 }
 
 section {
   background: var(--bg-black-100);
   width: 100vw;
   min-height: 100vh;
-}
-
-.aside {
-  background: var(--bg-black-900);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 270px;
-  height: 100%;
-  border-right: 1px solid var(--bg-black-50);
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.padd-15 {
-  padding: 15px;
-}
-
-.aside .logo-container {
-  position: absolute;
-  top: 50px;
-}
-
-.aside .logo-container img {
-  width: 160px;
-  height: 140px;
-}
-
-.aside .logo-container.none {
-  display: none;
-}
-
-.aside ul {
-  margin-top: 280px;
-  padding: 0;
-}
-
-.aside ul li {
-  margin-bottom: 80px;
-}
-
-.aside ul li a {
-  padding: 10px;
-  display: block;
-  border-bottom: 1px solid var(--bg-black-50);
-  font-weight: 600;
-  color: var(--text-black-700);
-  font-size: 20px;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  text-transform: capitalize !important;
-}
-
-.aside ul li:hover a {
-  color: var(--text-black-800);
-  border-bottom: 1px solid var(--text-black-800);
-}
-
-.aside ul li a.active {
-  color: var(--text-black-900);
-  border-bottom: 1px solid var(--text-black-900);
-}
-
-.aside ul li a i {
-  margin-right: 15px;
 }

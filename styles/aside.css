@@ -1,0 +1,183 @@
+/* Aside CSS */
+header {
+  position: relative;
+}
+
+.aside-toggle {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  background: var(--bg-black-50);
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 25%;
+  z-index: 11;
+  top: 20px;
+  left: 270px;
+}
+
+.aside-icon {
+  position: fixed;
+  left: 0;
+  width: 60px;
+  background: var(--bg-black-900);
+  border-right: 1px solid var(--bg-black-50);
+  top: 0;
+  z-index: 11;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-icon ul {
+  padding: 0;
+  text-align: center;
+}
+
+.aside-icon ul li {
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.aside-icon ul li:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.aside-icon ul li a {
+  color: var(--text-black-700);
+  font-size: 25px;
+}
+
+.aside-icon ul li a.active {
+  color: var(--text-black-900);
+}
+
+.aside-icon ul li:hover {
+  background: var(--bg-black-80);
+}
+
+.aside-icon ul li:hover a {
+  color: var(--text-black-800);
+}
+
+.aside-icon ul li:hover a.active {
+  color: var(--text-black-900);
+}
+
+.aside-toggle.remove {
+  display: none;
+}
+
+.layout {
+  font-size: 50px;
+  color: var(--text-black-900);
+  margin-left: 8px;
+}
+
+.aside {
+  background: var(--bg-black-900);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100%;
+  border-right: 1px solid var(--bg-black-50);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.padd-15 {
+  padding: 15px;
+}
+
+.aside .logo-container {
+  position: absolute;
+  top: 50px;
+}
+
+.aside .logo-container img {
+  width: 160px;
+  height: 140px;
+}
+
+.aside .logo-container.none {
+  display: none;
+}
+
+.aside ul {
+  margin-top: 280px;
+  padding: 0;
+}
+
+.aside ul li {
+  margin-bottom: 80px;
+}
+
+.aside ul li a {
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid var(--bg-black-50);
+  font-weight: 600;
+  color: var(--text-black-700);
+  font-size: 20px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  text-transform: capitalize !important;
+}
+
+.aside ul li:hover a {
+  color: var(--text-black-800);
+  border-bottom: 1px solid var(--text-black-800);
+}
+
+.aside ul li a.active {
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--text-black-900);
+}
+
+.aside ul li a i {
+  margin-right: 15px;
+}
+
+@media (max-width: 1920px) {
+  /* Styles for large desktops */
+  .aside ul {
+    margin-top: 220px;
+  }
+
+  .aside ul li {
+    margin-bottom: 50px;
+  }
+
+  .aside ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  /* Styles for small laptops */
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  /* Styles for tablets (landscape) */
+
+  .aside {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets (portrait) */
+}
+
+@media (max-width: 767px) {
+  /* Styles for larger mobile devices */
+}
+
+@media (max-width: 480px) {
+  /* Styles for small mobile devices */
+}
