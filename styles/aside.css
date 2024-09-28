@@ -3,6 +3,7 @@ header {
   position: relative;
 }
 
+/* Aside Toggle starts here */
 .aside-toggle {
   display: block;
   position: absolute;
@@ -14,8 +15,17 @@ header {
   z-index: 11;
   top: 20px;
   left: 270px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.aside-toggle.close {
+  left: 60px;
+}
+
+/* Aside Toggle ends here */
+
+/* Aside Icon starts here */
 .aside-icon {
   position: fixed;
   left: 0;
@@ -28,6 +38,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.aside-icon.open {
+  transform: translateX(0%);
 }
 
 .aside-icon ul {
@@ -38,6 +54,7 @@ header {
 .aside-icon ul li {
   padding: 8px;
   border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
 .aside-icon ul li:not(:last-child) {
@@ -47,6 +64,7 @@ header {
 .aside-icon ul li a {
   color: var(--text-black-700);
   font-size: 25px;
+  transition: color 0.3s ease;
 }
 
 .aside-icon ul li a.active {
@@ -74,7 +92,9 @@ header {
   color: var(--text-black-900);
   margin-left: 8px;
 }
+/* Aside Icon ends here */
 
+/* Aside starts here */
 .aside {
   background: var(--bg-black-900);
   position: fixed;
@@ -87,8 +107,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(-100%);
+  transform: translateX(0%);
   transition: all 0.3s ease;
+}
+
+.aside.close {
+  transform: translateX(-100%);
 }
 
 .padd-15 {
@@ -143,6 +167,65 @@ header {
   margin-right: 15px;
 }
 
+/* Aside ends here */
+
+/* Aside mobile starts here*/
+.aside-mobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  width: 100%;
+  background: var(--bg-black-900);
+  z-index: 10;
+  border-top: 1px solid var(--bg-black-50);
+}
+
+.aside-mobile ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  margin: 8px 0 0 0;
+  text-align: center;
+  position: relative;
+}
+
+.aside-mobile ul li {
+  cursor: pointer;
+  width: 70px;
+}
+
+.aside-mobile ul li:hover {
+  color: var(--text-black-800);
+}
+
+.aside-mobile ul li a {
+  font-size: 25px;
+  color: var(--text-black-700);
+  transition: color 0.3s ease;
+}
+
+.aside-mobile ul li a.active {
+  color: var(--text-black-900);
+}
+
+.aside-mobile ul li a h2 {
+  font-size: 12px;
+}
+
+.aside-mobile img {
+  position: absolute;
+  top: -35px;
+  left: 40%;
+}
+
+/* Aside mobile ends here*/
+
+/* Resposive Side */
+
 @media (max-width: 1920px) {
   /* Styles for large desktops */
   .aside ul {
@@ -164,10 +247,6 @@ header {
 
 @media (min-width: 1024px) and (max-width: 1280px) {
   /* Styles for tablets (landscape) */
-
-  .aside {
-    transform: translateX(-100%);
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -180,4 +259,19 @@ header {
 
 @media (max-width: 480px) {
   /* Styles for small mobile devices */
+  .aside-toggle {
+    display: none;
+  }
+
+  .aside-icon {
+    display: none;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .aside-mobile {
+    display: block;
+  }
 }
